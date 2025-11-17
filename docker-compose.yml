@@ -41,5 +41,16 @@ services:
     ports:
       - "29092:29092"
 
+  frontend:
+    build:
+      context: ./frontend
+    container_name: nextjs-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: http://api:8000
+    depends_on:
+      - api
+
 volumes:
   postgres_data:

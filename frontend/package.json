@@ -57,5 +57,8 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode production --env prod",
     "start": "cross-env NODE_ENV=development webpack serve --mode development --progress"
+  },
+  "dependencies": {
+    "axios": "^1.13.2"
   }
 }
